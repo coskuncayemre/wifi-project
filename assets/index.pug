@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset="utf-8" name="viewport" content="width=device-width,initial-scale=1")
+        link(rel='stylesheet' href='/css/bootstrap/bootstrap.min.css')
+        link(rel='stylesheet' href='/css/main.css')
+        link(rel="shortcut icon" href="/img/location-icon.png" type="image/x-icon")
+        title #{__('pageTitle')}
+    body
+        div(id="main")
+        br
+        .row.justify-content-center
+            img(class="img-responsive" src='/img/location-icon.png')
+        .container
+            .row.justify-content-center.py-3
+                .col-md-12.align-self-center.text-center
+                    h2.font-weight-bold.text-center(id="maxHeader") #{__('mxHeader')}
+                    h6.font-weight-light(id="minHeader" class="h-ec") #{__('mnHeader')}
+                .col-lg-4.col-md-6.col-xs-12.col-sm-6  
+                        each provider, i in providers
+                            a(href=provider.link tag="button" id="provider"+provider.id class="btn btn-lg btn-ec btn-primary btn-block active")
+                                b #{provider.name}
+            .row.justify-content-center
+                a(href="")
+                    img.image(src='/img/tr.png' id="tr" class="img-fluid img-ec" alt='Türkçe' title='Türkçe')
+                a(href="")
+                    img.image(src='/img/uk.png' id="en" class="img-fluid" alt='English' title='English')
+        script(src="/js/script.js")
+        

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "TÜRK TELEKOM",
+    "link": "https://www.turktelekom.com.tr/sayfalar/ana-sayfa.aspx",
+    "id": 1
+  },
+  {
+    "name": "TURKCELL",
+    "link": "https://www.turkcell.com.tr/",
+    "id": 2
+  },
+  {
+    "name": "EmreNet",
+    "link": "http://www.emreklam.com",
+    "id": 3
+  }
+]
