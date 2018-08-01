@@ -18,8 +18,8 @@ html
                     h6.font-weight-light(id="minHeader" class="h-ec") #{__('mnHeader')}
                 .col-lg-4.col-md-6.col-xs-12.col-sm-6  
                         each provider, i in providers
-                            a(href=provider.link tag="button" id="provider"+provider.id class="btn btn-lg btn-ec btn-primary btn-block active")
-                                b #{provider.name}
+                            a(href=provider.link tag="button" id="prov"+provider.id class="btn btn-lg btn-ec btn-primary btn-block active")
+                                b #{__('prov'+provider.id)}
             .row.justify-content-center
                 a(href="")
                     img.image(src='/img/tr.png' id="tr" class="img-fluid img-ec" alt='Türkçe' title='Türkçe')
