@@ -22,10 +22,10 @@ function Provider(name,link){
 };
 
 function createArray(firstList){ 
-    firstList.forEach(provider => {
-        var  newProv = new Provider(provider.name,provider.link);
+   for(var i=0;i<firstList.length;i++){
+        var  newProv = new Provider(firstList[i].name,firstList[i].link);
         providersList.push(newProv);
-    });
+   }
 };
 
 function getSPOfIP(userIP){
@@ -72,8 +72,7 @@ app.use(function(req,res,next){
 });
 
 app.get('/',function(req,res,next){
-    var userIP = "11.1.1.1";
-    //req.headers['x-forwarded-for'];
+    var userIP = req.headers['x-forwarded-for'];
     var currentProvID = getSPOfIP(userIP); 
     if(!isNaN(currentProvID)){
         var newLink = linkReturn(currentProvID);
@@ -85,7 +84,6 @@ app.get('/',function(req,res,next){
             providers : providersList
         });
     }
-    
 });
 
 app.post('/change/:lang',function(req,res){
