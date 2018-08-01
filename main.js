@@ -60,7 +60,6 @@ start(process.argv[2]+'.json');
 app.set('views',path.join(__dirname,'assets'));
 app.set('view engine','pug');
 app.use(express.static('assets'));
-app.use(express.static(__dirname));
 app.use('/bootstrap',express.static(__dirname+'/assets/css'));
 app.use(i18n.init);
 
@@ -73,7 +72,7 @@ app.use(function(req,res,next){
 
 app.get('/',function(req,res,next){
     var userIP = req.headers['x-forwarded-for'];
-    var currentProvID = getSPOfIP(userIP); 
+    var currentProvID = getSPOfIP(userIP);
     if(!isNaN(currentProvID)){
         var newLink = linkReturn(currentProvID);
         res.redirect(newLink);
