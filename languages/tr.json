@@ -1,5 +1,8 @@
 {
 	"pageTitle": "WiFi",
 	"mnHeader": "İnternete erişim sağlamak istediğiniz servis sağlayıcısını seçiniz.",
-	"mxHeader": "WiFi"
+	"mxHeader": "WiFi",
+	"prov1": "TÜRK TELEKOM",
+	"prov2": "TURKCELL",
+	"prov3": "InnovaNet"
 }

@@ -1,5 +1,8 @@
 {
 	"pageTitle": "WIFI",
 	"mnHeader": "Select the service provider you want to access the Internet.",
-	"mxHeader": "WIFI"
+	"mxHeader": "WIFI",
+	"prov1": "TURK TELEKOM",
+	"prov2": "TURKCELL",
+	"prov3": "InnovaNet"
 }
